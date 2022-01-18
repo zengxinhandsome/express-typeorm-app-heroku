@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+require('dotenv').config();
 var express = require("express");
 var typeorm_1 = require("typeorm");
 var Post_1 = require("./entities/Post");
