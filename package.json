@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc -w",
-    "start": "nodemon dist/src/index.js",
+    "start": "node dist/src/index.js",
+    "dev": "nodemon dist/src/index.js",
     "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js --config ./ormconfig.ts"
   },
   "keywords": [],
