@@ -103,7 +103,7 @@ var cors = require('cors');
             }
         });
     }); });
-    app.listen(3001, function () {
+    app.listen(process.env.PORT || 3001, function () {
         console.log('Server running on port http://localhost:3001');
     });
 })

@@ -49,7 +49,7 @@ createConnection(ormConfig)
       res.json(post);
     });
 
-    app.listen(3001, () => {
+    app.listen(process.env.PORT || 3001, () => {
       console.log('Server running on port http://localhost:3001');
     });
   })
