@@ -5,7 +5,7 @@ var ormConfig = {
     type: 'postgres',
     url: process.env.DATABASE_URL,
     logging: true,
-    synchronize: false,
+    synchronize: true,
     migrationsTableName: 'custom_migration_table',
     entities: ['dist/src/entities/*.js'],
     migrations: ['dist/src/migrations/*.js'],
@@ -13,13 +13,10 @@ var ormConfig = {
         migrationsDir: 'src/migrations',
         entitiesDir: 'src/entities'
     },
-    extra: {
-        // ssl: true
-        ssl: process.env.NODE_ENV === 'production'
-            ? {
-                rejectUnauthorized: false
-            }
-            : false
-    }
+    ssl: process.env.NODE_ENV === 'production'
+        ? {
+            rejectUnauthorized: false
+        }
+        : false
 };
 exports.default = ormConfig;

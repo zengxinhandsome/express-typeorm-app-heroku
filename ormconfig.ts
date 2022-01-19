@@ -6,7 +6,7 @@ const ormConfig: ConnectionOptions = {
   type: 'postgres',
   url: process.env.DATABASE_URL,
   logging: true,
-  synchronize: false,
+  synchronize: true,
   migrationsTableName: 'custom_migration_table',
   entities: ['dist/src/entities/*.js'],
   migrations: ['dist/src/migrations/*.js'],
