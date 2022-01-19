@@ -13,6 +13,9 @@ const ormConfig: ConnectionOptions = {
   cli: {
     migrationsDir: 'src/migrations',
     entitiesDir: 'src/entities'
+  },
+  extra: {
+    ssl: true
   }
 };
 export default ormConfig;
