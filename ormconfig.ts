@@ -14,11 +14,11 @@ const ormConfig: ConnectionOptions = {
     migrationsDir: 'src/migrations',
     entitiesDir: 'src/entities'
   },
-  extra: {
-    // ssl: true
-    ssl: {
-      rejectUnauthorized: false
-    }
-  }
+  ssl:
+    process.env.NODE_ENV === 'production'
+      ? {
+          rejectUnauthorized: false
+        }
+      : false
 };
 export default ormConfig;

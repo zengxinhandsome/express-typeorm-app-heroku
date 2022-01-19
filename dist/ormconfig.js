@@ -12,6 +12,14 @@ var ormConfig = {
     cli: {
         migrationsDir: 'src/migrations',
         entitiesDir: 'src/entities'
+    },
+    extra: {
+        // ssl: true
+        ssl: process.env.NODE_ENV === 'production'
+            ? {
+                rejectUnauthorized: false
+            }
+            : false
     }
 };
 exports.default = ormConfig;
