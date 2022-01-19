@@ -7,7 +7,7 @@ const ormConfig: ConnectionOptions = {
   url: process.env.DATABASE_URL,
   logging: true,
   synchronize: false,
-  // migrationsTableName: 'custom_migration_table',
+  migrationsTableName: 'custom_migration_table',
   entities: ['dist/src/entities/*.js'],
   migrations: ['dist/src/migrations/*.js'],
   cli: {
@@ -15,7 +15,10 @@ const ormConfig: ConnectionOptions = {
     entitiesDir: 'src/entities'
   },
   extra: {
-    ssl: true
+    // ssl: true
+    ssl: {
+      rejectUnauthorized: false,
+    }
   }
 };
 export default ormConfig;
