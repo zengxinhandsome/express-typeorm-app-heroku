@@ -13,12 +13,12 @@ const ormConfig: ConnectionOptions = {
   cli: {
     migrationsDir: 'src/migrations',
     entitiesDir: 'src/entities'
+  },
+  extra: {
+    // ssl: true
+    ssl: {
+      rejectUnauthorized: false
+    }
   }
-  // extra: {
-  // ssl: true
-  // ssl: {
-  //   rejectUnauthorized: false,
-  // }
-  // }
 };
 export default ormConfig;
