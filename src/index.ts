@@ -33,6 +33,7 @@ createConnection(ormConfig)
           code: 1,
           message: `找不到 id 为 ${id} 的 post`
         });
+        return;
       }
 
       post.title = title;
