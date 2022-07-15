@@ -12,7 +12,7 @@
 
 这是本地开发的数据库连接地址
 
-DATABASE_URL=postgres://postgres:zx1328526673@localhost:5432/express-typeorm-post
+DATABASE_URL=postgres://postgres:[YOUR_PASSWORD]@localhost:5432/express-typeorm-post
 
 当项目部署成功后，会读取 heroku 的环境变量
 
